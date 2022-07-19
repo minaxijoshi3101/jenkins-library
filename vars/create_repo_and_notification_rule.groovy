@@ -1,6 +1,6 @@
-import com.fwd.utils.autoCreateJiraShell
+import com.seh.utils.autoCreateJiraShell
 @Library("jenkins-shared-library")_
-import com.fwd.utils.*
+import com.seh.utils.*
     try {
         timeout(time: 60, unit: 'MINUTES') {
             pipeline {
