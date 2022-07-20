@@ -8,11 +8,11 @@ import com.seh.utils.*
                 def JIRA_KEY = params.JIRA_ISSUE_KEY
                 node("master") {
                     def issue = jiraGetIssue idOrKey: JIRA_KEY, site: 'JIRA_SG'
-                    List<String> repoNames = Arrays.asList(issue.data.fields.customfield_13705.toString().split("\\s*,\\s*"));
-                    String projectName = issue.data.fields.customfield_13706.toString().replaceAll(' ','_')
-                    String appName = issue.data.fields.customfield_13707.toString().replaceAll(' ','_')
-                    String repoAdmin =  issue.data.fields.customfield_13710.toString().replaceAll(' ','_')
-                    String exclusions = issue.data.fields.customfield_14302.toString()
+                    List<String> repoNames = Arrays.asList(issue.data.fields.customfield_10201.toString().split("\\s*,\\s*"));
+                    //String projectName = issue.data.fields.customfield_13706.toString().replaceAll(' ','_')
+                    String appName = issue.data.fields.customfield_10202.toString().replaceAll(' ','_')
+                    String repoAdmin =  issue.data.fields.customfield_10301.toString().replaceAll(' ','_')
+                    String exclusions = issue.data.fields.customfield_10300.toString()
                     jiraParams.put("appName", appName)
                     jiraParams.put("repoAdmin", repoAdmin)
 
