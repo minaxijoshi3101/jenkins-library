@@ -21,16 +21,16 @@ import com.seh.utils.*
                             if(!exclusions.contains("Exclude CodeCommit Repo"))
                             {
                                 new autoCreateRepo().call(repo,appName,repoAdmin)
-                                new applyNotificationRule().call(repo)
+                                //new applyNotificationRule().call(repo)
                             }
                             if(!exclusions.contains("Exclude Jenkins Jobs"))
                             {
-                               new autoCreateJob().call(repo,appName)
+                               //new autoCreateJob().call(repo,appName)
                             }
                         }
                         if(!exclusions.contains("Exclude Jira Project Creation"))
                         {
-                            new autoCreateJiraShell().call(jiraParams)
+                            //new autoCreateJiraShell().call(jiraParams)
                         }
                     }
                     stage("Update Jira") {
