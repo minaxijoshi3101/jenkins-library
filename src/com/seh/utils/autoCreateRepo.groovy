@@ -2,8 +2,8 @@ package com.seh.utils;
 
 def call(String repo, String appName,String repoAdmin) {
    //curl and github api to create repo in github
-   sh"curl -u 'minaxijoshi3101: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' https://api.github.com/user/repos -d '{"name":"${repo}"}'"
-   sh"echo ${repo}"
+   curl -u "minaxijoshi3101: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" https://api.github.com/user/repos -d '{"name":"${repo}"}'
+   echo ${repo}
      //sh"aws codecommit create-repository --repository-name ${repo} --tags Name=${appName}  --repository-description 'This '${repo}'- repo is auto created by jenkins'"
      sh """
         git clone https://github.com/minaxijoshi3101?tab=repositories/${repo}
