@@ -52,6 +52,6 @@ import com.seh.utils.*
         throw err
     }finally {
          node("master") {
-           sh "rm -rf ${WORKSPACE}/*"
+           //sh "rm -rf ${WORKSPACE}/*"
         }
     }
