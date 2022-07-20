@@ -20,6 +20,7 @@ import com.seh.utils.*
                         for(repo in repoNames) {
                             if(!exclusions.contains("Exclude CodeCommit Repo"))
                             {
+                                print repo
                                 new autoCreateRepo().call(repo,appName,repoAdmin)
                                 //new applyNotificationRule().call(repo)
                             }
