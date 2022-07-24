@@ -18,7 +18,7 @@ import com.seh.utils.*
 
                     stage("Create Repo & Jenkins Job") {
                         for(repo in repoNames) {
-                            if(!exclusions.contains("Exclude CodeCommit Repo"))
+                            if(!exclusions.contains("Exclude GITHUB Repo"))
                             {
                                 print repo
                                 new autoCreateRepo().call(repo,appName,repoAdmin)
