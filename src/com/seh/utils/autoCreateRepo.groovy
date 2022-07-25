@@ -4,7 +4,10 @@ def call(String repo, String appName,String repoAdmin) {
    //curl and github api to create repo in github
    sh """
    #curl -u 'minaxijoshi3101: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' https://api.github.com/user/repos -d '{"name":"customer-test"}'
-   curl -u 'minaxijoshi3101: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' https://api.github.com/user/repos -d '{"name":"${repo}"}'
+
+   curl --silent --header "PRIVATE-TOKEN: glpat-S-V7V3wF1YT-1N2VVsbK" -XPOST "https://gitlab.com/api/v4/projects?name=${repo}&visibility=public&initialize_with_readme=true"
+ 
+   #curl -u 'minaxijoshi3101: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' https://api.github.com/user/repos -d '{"name":"${repo}"}'
    """
    echo repo
      //sh"aws codecommit create-repository --repository-name ${repo} --tags Name=${appName}  --repository-description 'This '${repo}'- repo is auto created by jenkins'"
